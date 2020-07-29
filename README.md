@@ -1,8 +1,8 @@
 # New Adventures
 Discover hidden gems per city. Where to walk, sleep, eat and play.
-
-
-Create an app in one day, as part of the </salt> full stack javascript bootcamp. Ready, set, code!
+</salt> full stack JavaScript Bootcamp assignment. 
+The objective: create an app in one day.  
+> Ready, set, code!
 
 # Requirements
 
