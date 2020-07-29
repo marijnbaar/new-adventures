@@ -13,7 +13,6 @@ Passes the relevent information about the best hotspots in Dutch city's, for a f
 In the app users can select a holiday destination in Holland (my database has a list of different city's) and then they will be provided with a list of hotspots that can be visited in, or in the vacinity of that city. 
 
 # Preperations
-The first step would be making sure that I can actually access the google maps API. I have run a succesfull test. Second, fetching based on location and a specific kind of place.
 
 Create a single page application with React. 
 Set up the Express server to fetch data
