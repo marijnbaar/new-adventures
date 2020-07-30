@@ -1,5 +1,5 @@
 {
-  "name": "new-adventures",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,13 +10,11 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
-  "proxy": "http://localhost:3000",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint ./src/*.js"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,14 +30,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "express": "^4.17.1",
-    "eslint": "^6.8.0",
-    "eslint-config-salt": "^1.0.1",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-react": "^7.20.5",
-    "eslint-plugin-react-hooks": "^4.0.8"
   }
 }
-
