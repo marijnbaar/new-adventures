@@ -1,18 +1,21 @@
 import React, { Component } from "react";
-import logo from './logo.svg';
 import './App.css';
+// import Cities from '/Cities'
+
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { apiResponse: "" };
+    this.state = { 
+      cities: '' 
+    };
 }
 
 
 callCities() {
   fetch("http://localhost:3002/api/cities")
       .then(res => res.json())
-      .then(res => this.setState({ apiResponse: res }))
+      .then(data => this.setState({ cities: data.cities[0].city }))
       .catch(err => err);
 }
 
@@ -25,12 +28,17 @@ render() {
           <header className="App-header">
               <h1 className="App-title">Welcome to React</h1>
           </header>
-          <p className="App-intro">{this.state.apiResponse}</p>
+          <p className="App-intro">
+            
+            {this.state.cities}
+            </p>
 
           
       </div>
   );
   }
 }
+
+
 
 export default App;
