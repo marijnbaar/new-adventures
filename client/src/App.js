@@ -8,16 +8,10 @@ class App extends Component {
     this.state = { apiResponse: "" };
 }
 
-callAPI() {
-    fetch("http://localhost:9000/testAPI")
-        .then(res => res.text())
-        .then(res => this.setState({ apiResponse: res }))
-        .catch(err => err);
-}
 
 callCities() {
-  fetch("http://localhost:9000/cities")
-      .then(res => res.text())
+  fetch("http://localhost:3002/api/cities")
+      .then(res => res.json())
       .then(res => this.setState({ apiResponse: res }))
       .catch(err => err);
 }
@@ -32,6 +26,8 @@ render() {
               <h1 className="App-title">Welcome to React</h1>
           </header>
           <p className="App-intro">{this.state.apiResponse}</p>
+
+          
       </div>
   );
   }
