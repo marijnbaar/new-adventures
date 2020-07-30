@@ -1,21 +1,109 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Sans:wght@200;300;400&family=Julius+Sans+One&family=Lobster&family=Ranchers&family=Ultra&display=swap');
+
+body {
+  background: rgb(218, 255, 194);
+  background: linear-gradient(
+    90deg,
+    rgb(214, 221, 204) 0%,
+    rgb(208, 240, 246) 100%
+  );
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+/* ----- CONTAINER ----- */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* ----- HEADER ----- */
+h1 {
+  font-family: 'Rancher';
+  color: rgba(91, 158, 103, 0.726);
+  font-size: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.fa-suitcase {
+  font-size: 40px;
+
+}
+
+.App-title {
+  font-family: 'Julius Sans One', sans-serif;
+  color: rgba(91, 158, 103, 0.726);
+  font-size: 60px;
+}
+
+p {
+  font-family: 'Josefin Sans', sans-serif;
+  color: rgba(46, 90, 54, 0.726);
+  font-weight: 400;
+}
+
+/* ----- FORM ----- */
+.form-group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 25px;
+  width: 100%;
+}
+.form-field {
+  font-family: 'Josefin Sans', sans-serif;
+  width: 100%;
+  border-bottom: 2px solid rgb(99, 139, 96);
+  border-radius: 5px;
+  outline: 0;
+  font-size: 30px;
+  color: rgb(248, 249, 250);
+  padding: 5px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form-field::placeholder {
+  color: transparent;
+}
+.form-field:placeholder-shown ~ .form-label {
+  font-size: 15px;
+  cursor: text;
+  color: red;
+  top: 50px;
+}
+
+.form-field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 4px;
+  border-image: linear-gradient(to right, #11998e, #034439);
+  border-radius: 9px;
+  border-image-slice: 1;
+}
+.form-field:focus ~ .form-label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+  font-weight: 700;
+}
+
+/* ----- Text over image ----- */
+.centered {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  
+}
+
+.Wanderer-header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +112,38 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+img {
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ------ Button ------ */
+
+button {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #72b3a5;
+  color:rgb(20, 35, 58);
+  font-size: 13px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 100px;
+  padding: 0 22px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background: rgb(163, 214, 177);
+  width: 170px;
+  margin-right: 40px;
+  margin-top: 15px;
+  font-family: 'Josefin Sans', sans-serif;
+  color: rgba(31, 59, 37, 0.726);
+  font-size: 14px;
 }
+
+.button:hover {
+  box-shadow: 0 2px 4px rgba(83, 100, 255, 0.45);
+}
+
+
+

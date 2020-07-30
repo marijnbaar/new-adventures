@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import './App.css';
 import Hotspot from './cities'
 
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -15,64 +14,53 @@ class App extends Component {
 
   callCities = () => {
     let city = document.getElementById("city").value;
-    console.log('see if this works', city)
     fetch(`http://localhost:3002/api/cities/${city.toLowerCase()}`)
       .then(res => res.json())
       .then(data => this.setState({
-        keys: Object.keys(data.hotspots),
-        hotspots: data.hotspots
+        hotspots: data.hotspots,
+        keys: Object.keys(data.hotspots)
       }))
-      .catch(err => console.log(err));
+      .catch(err => err);
   }
 
   componentDidMount() {
     this.callCities();
   }
 
-  // getCity = () => {
-  //   fetch(`http://localhost:3002/api/cities/${this.state.hotspots}`)
-  //     .then(res => res.json())
-  //     .then(data => this.setState({
-  //       keys: data.hotspots.walk,
-
-  //       // hotspots: data.hotspots
-  //     }))
-  //     .catch(err => err);
-  // }
-
-  // callCities = () => {
-  //   console.log("try")
-  //   let city = document.getElementById("city").value;
-  //   // fetch(`http://localhost:3002/api/cities/${city}`)
-  //   //   .then(res => res.json())
-  //   //   .then(data => {
-  //       this.setState({
-  //       // keys: data.hotspots.keys(),
-  //       hotspots: city
-  //     })
-  //     // .then(console.log('try2', this.state.hotspots))
-  //   // })
-  //     // .catch(err => err);
-   
-  // }
-
-
 
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-      <input type="text" id="city"></input><button onClick={this.callCities.bind(this)}>click me</button>
+        <header className="Wanderer-header">
+          <img className="cover" src="https://picsum.photos/id/1021/1500/460" alt="mountains" />
+          <div className="centered">
+            <h1 className="App-title">Welcome, wanderer!</h1>
+            <i className="fa fa-suitcase" aria-hidden="true"></i>
+            <p>Where do you want to go?</p>
+            <div>
+              <input
+                type="text"
+                id="city"
+                className="form-field"
+                placeholder="Go to..."
+              />
+
+            </div>
+              <button type="submit" className="wander-to-city" id="button" onClick={this.callCities.bind(this)}>To my destination</button>
+
+          </div>
         </header>
         <main>
           <div>
-          {/* <p>{this.state.hotspots ? this.state.hotspots.walk : 'hi'}</p> */}
-
             {
-              this.state.keys ? this.state.keys.map(key => (<Hotspot action={key} suggestion={this.state.hotspots[key]}/>)) :
-              null
+              this.state.keys ? this.state.keys.map(key => (
+                <Hotspot
+                  key={Math.random()}
+                  action={key}
+                  suggestion={this.state.hotspots[key]}
+                />)) :
+                null
             }
           </div>
         </main>
