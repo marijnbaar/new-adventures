@@ -3,44 +3,42 @@ import './App.css';
 import Hotspot from './cities'
 
 
-
-function checkState(props) {
-  if (keys === true) {
-    this.state.keys.map(key => {
-      return (
-        <Hotspot
-          action={key}
-          suggestion={this.state.hotspots.key}
-        />
-      )
-    });
-  }
-  return null;
-}
-
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      hotspots: null,
-      keys: null
-    };
+
+  state = {
+    hotspots: null,
+    keys: null
   }
 
-
-  callCities = () => {
-    fetch("http://localhost:3002/api/cities/Vlieland")
+  getCity = () => {
+    fetch(`http://localhost:3002/api/cities/${this.state.hotspots}`)
       .then(res => res.json())
       .then(data => this.setState({
-        keys: data.hotspots.keys(),
-        hotspots: data.hotspots
+        keys: data.hotspots.walk,
+
+        // hotspots: data.hotspots
       }))
       .catch(err => err);
   }
 
-  componentDidMount() {
-    this.callCities();
+  callCities = () => {
+    console.log("try")
+    let city = document.getElementById("city").value;
+    // fetch(`http://localhost:3002/api/cities/${city}`)
+    //   .then(res => res.json())
+    //   .then(data => {
+        this.setState({
+        // keys: data.hotspots.keys(),
+        hotspots: city
+      })
+      // .then(console.log('try2', this.state.hotspots))
+    // })
+      // .catch(err => err);
+    this.getCity();
   }
+
+
+
 
 
 
@@ -49,18 +47,15 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Welcome to React</h1>
+      <p>{this.state.hotspots}</p>
+      <p>{this.state.keys}</p>
+      <input type="text" id="city"></input><button onClick={this.callCities.bind(this)}>click me</button>
         </header>
         <main>
           <div>
             {
-              this.state.keys.map(key => {
-                return (
-                  <Hotspot
-                    action={key}
-                    suggestion={this.state.hotspots.key}
-                  />
-                )
-              })
+              this.state.keys ? this.state.keys.map(key => (<Hotspot action={key} suggestion={this.state.hotspots.key}/>)) :
+              null
             }
           </div>
         </main>
@@ -68,7 +63,5 @@ class App extends Component {
     );
   }
 }
-
-
 
 export default App;

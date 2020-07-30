@@ -12,7 +12,3 @@ class Hotspot extends Component {
 }
 
 export default Hotspot;
-
-// create a hotspot Component - functional Component
-// inside a div
-// render h1/paragraph with infromation props props.action 
