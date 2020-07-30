@@ -1,20 +1,18 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
-import City from "./City";
-
-
-render() {
-  return (
-    <div>
-      <h2>All the cities</h2>
-      <div className="cityContainer">
-        {this.props.cities.map((city) => (
-          <City
-            city={city.city}
-            walk={city.name}
-          />
-        ))}
+class Hotspot extends Component {
+  render() {
+    return (
+      <div>
+        <h1>{this.props.action}</h1>
+        <p>{this.props.suggestion}</p>
       </div>
-    </div>
-  );
+    )
+  }  
 }
+
+export default Hotspot;
+
+// create a hotspot Component - functional Component
+// inside a div
+// render h1/paragraph with infromation props props.action 

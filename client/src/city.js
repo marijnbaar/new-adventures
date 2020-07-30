@@ -4,7 +4,9 @@ class City extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      cities: '' 
+      cities: '',
+    
+
     };
 }
 

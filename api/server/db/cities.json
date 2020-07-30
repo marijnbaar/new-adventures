@@ -1,61 +1,75 @@
 
 {
   "cities": [
-      {
+      { 
         "city": "Amsterdam",
-        "walk": "'t Twiske",
-        "eat": "Bak",
-        "discover": "The canals by boat",
-        "museum": "Het Rijksmuseum",
-        "hotel": "The Hoxton"
+        "hotspots": {
+          "walk": "'t Twiske",
+          "eat": "Bak",
+          "discover": "The canals by boat",
+          "museum": "Het Rijksmuseum",
+          "hotel": "The Hoxton"
+        }
       },
       {
         "city": "Vlieland",
-        "walk": "De Vuurtoren",
-        "eat": "Het Armhuis",
-        "discover": "The island by bike",
-        "museum": "De Noordwester",
-        "hotel": "Badhotel Bruin"
+        "hotspots": {
+          "walk": "De Vuurtoren",
+          "eat": "Het Armhuis",
+          "discover": "The island by bike",
+          "museum": "De Noordwester",
+          "hotel": "Badhotel Bruin"
+        }
       },
       {
         "city": "Groningen",
-        "walk": "De Prinsentuin",
-        "eat": "Pernikkel",
-        "discover": "Het Noorderplantsoen tijdens Noorderzon",
-        "museum": "Het Groninger Museum",
-        "hotel": "Piloersemaborg"
+        "hotspots": {
+          "walk": "De Prinsentuin",
+          "eat": "Pernikkel",
+          "discover": "Het Noorderplantsoen tijdens Noorderzon",
+          "museum": "Het Groninger Museum",
+          "hotel": "Piloersemaborg"
+        }
       },
       {
         "city": "Utrecht",
-        "walk": "Wilhelminapark",
-        "eat": "The Streetfood Club",
-        "discover": "Het Nijntje museum",
-        "museum": "Catharijneconvent",
-        "hotel": "The Anthony"
+        "hotspots": {
+          "walk": "Wilhelminapark",
+          "eat": "The Streetfood Club",
+          "discover": "Het Nijntje museum",
+          "museum": "Catharijneconvent",
+          "hotel": "The Anthony"
+        }
       },
       {
         "city": "Maastricht",
-        "walk": "Griendpark",
-        "eat": "Lumiere Cinema restaurant",
-        "discover": "Wonderwoud",
-        "museum": "Bonnefanten",
-        "hotel": "Monastere"
+        "hotspots": {
+          "walk": "Griendpark",
+          "eat": "Lumiere Cinema restaurant",
+          "discover": "Wonderwoud",
+          "museum": "Bonnefanten",
+          "hotel": "Monastere"
+        }
       },
       {
         "city": "Middelburg",
-        "walk": "Erasmuspark",
-        "eat": "Klein cafe cliche",
-        "discover": "Maison de la mer",
-        "museum": "Zeeuws Museum",
-        "hotel": "Roosevelt"
+        "hotspots": {
+          "walk": "Erasmuspark",
+          "eat": "Klein cafe cliche",
+          "discover": "Maison de la mer",
+          "museum": "Zeeuws Museum",
+          "hotel": "Roosevelt"
+        }
       },
       {
         "city": "Leeuwarden",
-        "walk": "Blokhuispoort",
-        "eat": "Wannee",
-        "discover": "De Grutterswinkel",
-        "museum": "Keramiekmuseum Princessehof",
-        "hotel": "Woonboot nummer 100"
+        "hotspots": {
+          "walk": "Blokhuispoort",
+          "eat": "Wannee",
+          "discover": "De Grutterswinkel",
+          "museum": "Keramiekmuseum Princessehof",
+          "hotel": "Woonboot nummer 100"
+        }
       }
     ]
 }

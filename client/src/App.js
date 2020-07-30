@@ -1,41 +1,71 @@
 import React, { Component } from "react";
 import './App.css';
-// import Cities from '/Cities'
+import Hotspot from './cities'
 
+
+
+function checkState(props) {
+  if (keys === true) {
+    this.state.keys.map(key => {
+      return (
+        <Hotspot
+          action={key}
+          suggestion={this.state.hotspots.key}
+        />
+      )
+    });
+  }
+  return null;
+}
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      cities: '' 
+    this.state = {
+      hotspots: null,
+      keys: null
     };
-}
+  }
 
 
-callCities() {
-  fetch("http://localhost:3002/api/cities")
+  callCities = () => {
+    fetch("http://localhost:3002/api/cities/Vlieland")
       .then(res => res.json())
-      .then(data => this.setState({ cities: data.cities[0].city }))
+      .then(data => this.setState({
+        keys: data.hotspots.keys(),
+        hotspots: data.hotspots
+      }))
       .catch(err => err);
-}
+  }
 
-componentDidMount() {
+  componentDidMount() {
     this.callCities();
-}
-render() {
-  return (
-      <div className="App">
-          <header className="App-header">
-              <h1 className="App-title">Welcome to React</h1>
-          </header>
-          <p className="App-intro">
-            
-            {this.state.cities}
-            </p>
+  }
 
-          
+
+
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <h1 className="App-title">Welcome to React</h1>
+        </header>
+        <main>
+          <div>
+            {
+              this.state.keys.map(key => {
+                return (
+                  <Hotspot
+                    action={key}
+                    suggestion={this.state.hotspots.key}
+                  />
+                )
+              })
+            }
+          </div>
+        </main>
       </div>
-  );
+    );
   }
 }
 
