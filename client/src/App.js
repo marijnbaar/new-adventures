@@ -15,14 +15,20 @@ callAPI() {
         .catch(err => err);
 }
 
+callCities() {
+  fetch("http://localhost:9000/cities")
+      .then(res => res.text())
+      .then(res => this.setState({ apiResponse: res }))
+      .catch(err => err);
+}
+
 componentDidMount() {
-    this.callAPI();
+    this.callCities();
 }
 render() {
   return (
       <div className="App">
           <header className="App-header">
-              <img src={logo} className="App-logo" alt="logo" />
               <h1 className="App-title">Welcome to React</h1>
           </header>
           <p className="App-intro">{this.state.apiResponse}</p>
