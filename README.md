@@ -25,4 +25,4 @@ Keep it clean and simple. Nice colours, maybe a subtle gradient and a nature-lik
 
 # In the future
 This app could be easily expanded with a couple of future extentions. 
-More responsive is on top of the list, and added functionality with more descriptions per destination, pictures or Wikipedia information added to enrich the text. 
+More responsive is on top of the list, and added functionality with more descriptions per destination, pictures or Wikipedia information added to enrich the text. It would also be nice to have a dropdown menu where the user can select a city from, so that no superpowers are required, guessing the available cities in the database. 
