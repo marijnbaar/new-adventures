@@ -6,7 +6,7 @@ The objective: create an app in one day.
 
 # Requirements
 
-Implement a front-end with React, and implement a back-end, for which I will use express and a database that I create myself, that stores data in a json object. 
+Implement a front-end with React, and implement a back-end, for which I will use express. I created the database myself, that stores data in a json object. 
 Passes the relevent information about the best hotspots in Dutch city's, for a fun, safe and corona-proof holiday in Holland. 
 
 # My app
@@ -23,4 +23,6 @@ In the app users can select a holiday destination in Holland (my database has a 
 # Design
 Keep it clean and simple. Nice colours, maybe a subtle gradient and a nature-like look and feel, that will make you want to embark upon new adventures. 
 
-
+# In the future
+This app could be easily expanded with a couple of future extentions. 
+More responsive is on top of the list, and added functionality with more descriptions per destination, pictures or Wikipedia information added to enrich the text. It would also be nice to have a dropdown menu where the user can select a city from, so that no superpowers are required, guessing the available cities in the database. 
