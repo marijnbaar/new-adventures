@@ -9,16 +9,14 @@ body {
   );
 }
 
-
-
-/* ----- CONTAINER ----- */
+/* ----- Container ----- */
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* ----- HEADER ----- */
+/* ----- Header ----- */
 h1 {
   font-family: 'Rancher';
   color: rgba(91, 158, 103, 0.726);
@@ -32,7 +30,7 @@ h1 {
 
 .App-title {
   font-family: 'Julius Sans One', sans-serif;
-  color: rgba(91, 158, 103, 0.726);
+  color: rgba(255, 255, 255, 0.726);
   font-size: 60px;
 }
 
@@ -42,7 +40,9 @@ p {
   font-weight: 400;
 }
 
-/* ----- FORM ----- */
+/* ----- Form ----- */
+
+
 .form-group {
   position: relative;
   padding: 15px 0 0;
@@ -53,34 +53,34 @@ p {
   font-family: 'Josefin Sans', sans-serif;
   width: 100%;
   border-bottom: 2px solid rgb(99, 139, 96);
-  border-radius: 5px;
+  border-radius: 3px;
   outline: 0;
-  font-size: 30px;
-  color: rgb(248, 249, 250);
-  padding: 5px 0;
+  font-size: 30px;  
+  padding: 10px;
   background: transparent;
   transition: border-color 0.2s;
 }
 
 .form-field::placeholder {
-  color: transparent;
+  color:rgb(255, 255, 255);
+  font-size: 20px;
 }
-.form-field:placeholder-shown ~ .form-label {
+/* .form-field:placeholder-shown ~ .form-label {
   font-size: 15px;
   cursor: text;
-  color: red;
   top: 50px;
-}
+} */
 
 .form-field:focus {
   padding-bottom: 6px;
   font-weight: 700;
   border-width: 4px;
   border-image: linear-gradient(to right, #11998e, #034439);
-  border-radius: 9px;
+  border-radius: 20px;
   border-image-slice: 1;
+  background: transparent;
 }
-.form-field:focus ~ .form-label {
+/* .form-field:focus ~ .form-label {
   position: absolute;
   top: 0;
   display: block;
@@ -88,7 +88,7 @@ p {
   font-size: 1rem;
   color: #11998e;
   font-weight: 700;
-}
+} */
 
 /* ----- Text over image ----- */
 .centered {
@@ -108,16 +108,13 @@ p {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  background-image: url(https://picsum.photos/id/1021/1700/460);
+  font-weight: bold;
+}
+
+.go {
   color: white;
 }
-
-img {
-  width: 100%;
-  height: auto;
-  opacity: 0.7;
-}
-
-
 
 /* ------ Button ------ */
 
@@ -125,7 +122,6 @@ button {
   display: inline-block;
   text-decoration: none;
   border: 1px solid #72b3a5;
-  color:rgb(20, 35, 58);
   font-size: 13px;
   text-align: center;
   line-height: 38px;
@@ -138,13 +134,18 @@ button {
   margin-right: 40px;
   margin-top: 15px;
   font-family: 'Josefin Sans', sans-serif;
-  color: rgba(31, 59, 37, 0.726);
+  color: rgb(255, 255, 255);
   font-size: 14px;
 }
 
 .button:hover {
   box-shadow: 0 2px 4px rgba(83, 100, 255, 0.45);
 }
+
+/* .button-input-field {
+  display: flex;
+  flex-direction: column;
+} */
 
 
 

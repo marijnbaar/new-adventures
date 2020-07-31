@@ -10,8 +10,7 @@ class App extends Component {
       keys: null
     };
   }
-
-
+  
   callCities = () => {
     let city = document.getElementById("city").value;
     fetch(`http://localhost:3002/api/cities/${city.toLowerCase()}`)
@@ -27,18 +26,16 @@ class App extends Component {
     this.callCities();
   }
 
-
-
   render() {
     return (
       <div className="App">
         <header className="Wanderer-header">
-          <img className="cover" src="https://picsum.photos/id/1021/1500/460" alt="mountains" />
+          <img className="cover" src="https://picsum.photos/id/1021/2500/460" alt="mountains" />
           <div className="centered">
             <h1 className="App-title">Welcome, wanderer!</h1>
             <i className="fa fa-suitcase" aria-hidden="true"></i>
-            <p>Where do you want to go?</p>
-            <div>
+            <p className="go">Where do you want to go?</p>
+            <div className="button-input-field">
               <input
                 type="text"
                 id="city"
@@ -46,8 +43,8 @@ class App extends Component {
                 placeholder="Go to..."
               />
 
-            </div>
               <button type="submit" className="wander-to-city" id="button" onClick={this.callCities.bind(this)}>To my destination</button>
+            </div>
 
           </div>
         </header>
