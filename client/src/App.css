@@ -59,17 +59,20 @@ p {
   padding: 10px;
   background: transparent;
   transition: border-color 0.2s;
+  color: rgb(255, 251, 251);
 }
 
 .form-field::placeholder {
   color:rgb(255, 255, 255);
   font-size: 20px;
+  color: transparent;
 }
-/* .form-field:placeholder-shown ~ .form-label {
+.form-field:placeholder-shown ~ .form-label {
   font-size: 15px;
   cursor: text;
   top: 50px;
-} */
+  color: transparent;
+}
 
 .form-field:focus {
   padding-bottom: 6px;
@@ -80,7 +83,7 @@ p {
   border-image-slice: 1;
   background: transparent;
 }
-/* .form-field:focus ~ .form-label {
+.form-field:focus ~ .form-label {
   position: absolute;
   top: 0;
   display: block;
@@ -88,7 +91,7 @@ p {
   font-size: 1rem;
   color: #11998e;
   font-weight: 700;
-} */
+}
 
 /* ----- Text over image ----- */
 .centered {
