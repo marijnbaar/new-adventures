@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './App.css';
-import Hotspot from './cities'
+import Hotspot from './hotspot'
 
 class App extends Component {
   constructor(props) {
@@ -42,10 +42,8 @@ class App extends Component {
                 className="form-field"
                 placeholder="Go to..."
               />
-
               <button type="submit" className="wander-to-city" id="button" onClick={this.callCities.bind(this)}>To my destination</button>
             </div>
-
           </div>
         </header>
         <main>
