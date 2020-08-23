@@ -4,6 +4,8 @@ Discover hidden gems per city. Where to walk, sleep, eat and play.
 The objective: create an app in one day.  
 > Ready, set, code!
 
+![Preview](./Preview.mov)
+
 # Requirements
 
 Implement a front-end with React, and implement a back-end, for which I will use express. I created the database myself, that stores data in a json object. 
