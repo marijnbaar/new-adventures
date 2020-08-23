@@ -4,7 +4,7 @@ Discover hidden gems per city. Where to walk, sleep, eat and play.
 The objective: create an app in one day.  
 > Ready, set, code!
 
-![Preview](./Preview.mov)
+![Preview](./Preview.gif)
 
 # Requirements
 
